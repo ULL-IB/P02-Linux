@@ -155,25 +155,35 @@ $ ./square
 ```
 Estudie el contenido del fichero que contiene el código fuente `square.cc` y trate de comprender cómo funciona el programa.
 
-#### Ejercicio 11. 
-Elimine el fichero `square` resultante de la compilación en el paso anterior. Tenga en cuenta que en Linux (Unix) una vez un fichero se borra, lo perderá para siempre.
+#### Ejercicio 11.
+Busque en qué punto del directorio `/usr/` de su máquina virtual se ha instalado el comando `tree`. Para ello, ejecute el comando:
+``` .bash
+$ find /usr/ -name tree
+```
+Ejecute el comando `type` sobre cada uno de los resultados para encontrar cuál de ellos es un fichero ejecutable (*executable*):
+``` .bash
+$ type /usr/bin/tree
+```
 
 #### Ejercicio 12. 
-Cambie el nombre de `square.cc` a `square_numbers.cc`.
+Elimine el fichero `square` resultante de la compilación en el paso anterior. Tenga en cuenta que en Linux (Unix) una vez un fichero se borra, lo perderá para siempre.
 
 #### Ejercicio 13. 
-¿Cómo se muestra un fichero de texto largo para que se detenga en cada pantalla? Practique mostrando en pantalla el contenido del fichero `/proc/cpuinfo` (observe la ruta absoluta en el nombre de ese fichero) que contiene información sobre las CPUs de su máquina.
+Cambie el nombre de `square.cc` a `square_numbers.cc`.
 
 #### Ejercicio 14. 
-¿Qué contiene el fichero de texto `long-text-file.txt` que se encuentra en su directorio de trabajo?
+¿Cómo se muestra un fichero de texto largo para que se detenga en cada pantalla? Practique mostrando en pantalla el contenido del fichero `/proc/cpuinfo` (observe la ruta absoluta en el nombre de ese fichero) que contiene información sobre las CPUs de su máquina.
 
 #### Ejercicio 15. 
-¿Qué hacen las teclas de flechas arriba y flecha abajo cuando está ejecutándose la shell de Linux (bash)?
+¿Qué contiene el fichero de texto `long-text-file.txt` que se encuentra en su directorio de trabajo?
 
 #### Ejercicio 16. 
-En la shell, escriba el carácter `!` seguido de una letra como la `g` o la `l`, como en `!g` o `!l`. Experimente con otras letras después del símbolo de exclamación. ¿Qué hace la exclamación?
+¿Qué hacen las teclas de flechas arriba y flecha abajo cuando está ejecutándose la shell de Linux (bash)?
 
 #### Ejercicio 17. 
+En la shell, escriba el carácter `!` seguido de una letra como la `g` o la `l`, como en `!g` o `!l`. Experimente con otras letras después del símbolo de exclamación. ¿Qué hace la exclamación?
+
+#### Ejercicio 18. 
 Experimente con el comando `grep`. `grep` es un programa que permite buscar texto usando expresiones regulares (estudiará Ud. expresiones regulares más adelante en 2º curso). Por ahora, puede usarlo para buscar un patrón de texto. Un uso básico del comando es:
 ``` .bash
 grep string target-file
@@ -182,12 +192,12 @@ Ese comando localiza todas las apariciones de la cadena de texto `string` en el 
 
 El fichero `long-text-file.txt` contiene 187018 palabras. Use `grep` para encontrar todas las palabras que contengan "aula" en ese fichero. ¿Cuáles son esas las palabras?
 
-#### Ejercicio 18. 
+#### Ejercicio 19. 
 Use un *pipe* (encadenamiento de comandos). El comando `wc` (de *Word Count*) indica cuántas líneas, palabras y caracteres hay en un fichero. Utilice el comando `man` para conocer el funcionamiento de `wc`, así como información detallada del comando. Utilizando `wc` averigüe cuantas líneas, palabras y caracteres contiene el fichero `long-text-file.txt`
 
 Utilice un *pipe* (usando el caracter `|`) para vincular los dos comandos anteriores (`grep` y `wc`) entre sí, para averiguar cuántas veces aparecen en el fichero `long-text-file.txt` cada una de las palabras que contienen la subcadena "aula". Escriba un fichero de texto `aula.txt` en el que figure cada una de estas palabras y el número de veces que aparece en el fichero `long-text-file.txt`.
 
-### Ejercicio 19.
+#### Ejercicio 20.
 Salga de su sesión `ssh` con el comando `exit` y vuelva a entrar en su máquina virtual utilizando esta vez el comando [`sftp`](https://man7.org/linux/man-pages/man1/sftp.1.html), siguiendo la misma sintaxis:
 ``` .bash
 sftp usuario@<dirección IP de su máquina>
