@@ -160,9 +160,9 @@ Busque en qué punto del directorio `/usr/` de su máquina virtual se ha instala
 ``` .bash
 $ find /usr/ -name tree
 ```
-Ejecute el comando `type` sobre cada uno de los resultados para encontrar cuál de ellos es un fichero ejecutable (*executable*):
+Ejecute el comando `file` sobre cada uno de los resultados para encontrar cuál de ellos es un fichero ejecutable (*executable*):
 ``` .bash
-$ type /usr/bin/tree
+$ file /usr/bin/tree
 ```
 
 #### Ejercicio 12. 
